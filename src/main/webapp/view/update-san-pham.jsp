@@ -23,7 +23,7 @@
         <form action="#" method="post">
             <div class="row mt-4">
                 <div class="col-6">
-                    <label>ID</label>
+                    <label>Mã</label>
                     <input type="text" class="form-control"/>
                 </div>
                 <div class="col-6">

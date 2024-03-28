@@ -28,6 +28,7 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Mã</th>
                 <th scope="col">Tên </th>
                 <th scope="col">Loại</th>
                 <th scope="col">Số lượng tồn</th>

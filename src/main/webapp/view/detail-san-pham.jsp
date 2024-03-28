@@ -22,7 +22,7 @@
     <section>
         <div class="row mt-4">
             <div class="col-6">
-                <label>ID</label>
+                <label>Mã</label>
                 <label></label>
             </div>
             <div class="col-6">
