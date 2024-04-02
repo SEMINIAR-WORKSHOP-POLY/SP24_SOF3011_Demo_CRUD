@@ -20,29 +20,29 @@
 </header>
 <main class="container">
     <section>
-        <form action="/may-tinh/view-update?id=${mt.id}" method="post">
+        <form action="#" method="post">
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Mã</label>
-                    <input type="text" class="form-control" name="ma" value="${mt.ma}"/>
+                    <input type="text" class="form-control"/>
                 </div>
                 <div class="col-6">
                     <label>Tên </label>
-                    <input type="text" class="form-control" name="ten" value="${mt.ten}"/>
+                    <input type="text" class="form-control"/>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Giá </label>
-                    <input type="text" class="form-control" name="gia"  value="${mt.gia}"/>
+                    <input type="text" class="form-control"/>
                 </div>
                 <div class="col-6">
                     <label>Bộ nhớ</label>
-                    <select name="boNho">
-                        <option value="128GB" ${mt.boNho == "128GB" ? "selected" : ""}>128GB</option>
-                        <option value="256GB" ${mt.boNho == "256GB" ? "selected" : ""}>256GB</option>
-                        <option value="512GB" ${mt.boNho == "512GB" ? "selected" : ""}>512GB</option>
-                        <option value="1TB" ${mt.boNho == "1TB" ? "selected" : ""}>1TB</option>
+                    <select>
+                        <option value="128GB">128GB</option>
+                        <option value="256GB">256GB</option>
+                        <option value="512GB">512GB</option>
+                        <option value="1TB">1TB</option>
                     </select>
 
                 </div>
@@ -50,23 +50,23 @@
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Màu sắc</label>
-                    <input type="radio" name="mauSac" value="Đen" ${mt.mauSac == "Đen" ? "checked" : ""} checked>Đen
-                    <input type="radio" name="mauSac" value="Bạc" ${mt.mauSac == "Bạc" ? "checked" : ""}>Bạc
+                    <input type="radio" name="mauSac" value="Đen" checked>Đen
+                    <input type="radio" name="mauSac" value="Bạc">Bạc
                 </div>
                 <div class="col-6">
                     <label>Hãng</label>
-                    <select name="hang">
-                        <option value="MSI" ${mt.hang == "MSI" ? "selected" : ""}>MSI</option>
-                        <option value="ASUS" ${mt.hang == "ASUS" ? "selected" : ""}>ASUS</option>
-                        <option value="ACER" ${mt.hang == "ACER" ? "selected" : ""}>ACER</option>
-                        <option value="DELL" ${mt.hang == "DELL" ? "selected" : ""}>DELL</option>
+                    <select>
+                        <option value="MSI">MSI</option>
+                        <option value="ASUS">ASUS</option>
+                        <option value="ACER">ACER</option>
+                        <option value="DELL">DELL</option>
                     </select>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-12">
                     <label>Mô tả</label>
-                    <input type="text" class="form-control" name="mieuTa" value="${mt.mieuTa}"/>
+                    <input type="text" class="form-control"/>
                 </div>
             </div>
             <div class="row mt-4" style="justify-content: center">

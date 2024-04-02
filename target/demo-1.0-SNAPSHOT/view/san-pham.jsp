@@ -16,33 +16,33 @@
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-<header class="container"> <h3 style="text-align: center;margin-top:15px;">Quản Lý Máy Tính</h3>
+<header class="container"><h3 style="text-align: center;margin-top:15px;">Quản Lý Máy Tính</h3>
 </header>
 <main class="container">
     <section>
-        <form action="/may-tinh/add" method="post">
+        <form action="#" method="post">
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Mã</label>
-                    <input type="text" class="form-control" name="ma" value="${mt.ma}"/>
+                    <input type="text" class="form-control"/>
                 </div>
                 <div class="col-6">
                     <label>Tên </label>
-                    <input type="text" class="form-control" name="ten" value="${mt.ten}"/>
+                    <input type="text" class="form-control"/>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Giá </label>
-                    <input type="text" class="form-control" name="gia"  value="${mt.gia}"/>
+                    <input type="text" class="form-control"/>
                 </div>
                 <div class="col-6">
                     <label>Bộ nhớ</label>
-                    <select name="boNho">
-                        <option value="128GB" ${mt.boNho == "128GB" ? "selected" : ""}>128GB</option>
-                        <option value="256GB" ${mt.boNho == "256GB" ? "selected" : ""}>256GB</option>
-                        <option value="512GB" ${mt.boNho == "512GB" ? "selected" : ""}>512GB</option>
-                        <option value="1TB" ${mt.boNho == "1TB" ? "selected" : ""}>1TB</option>
+                    <select>
+                        <option value="128GB">128GB</option>
+                        <option value="256GB">256GB</option>
+                        <option value="512GB">512GB</option>
+                        <option value="1TB">1TB</option>
                     </select>
 
                 </div>
@@ -50,23 +50,23 @@
             <div class="row mt-4">
                 <div class="col-6">
                     <label>Màu sắc</label>
-                    <input type="radio" name="mauSac" value="Đen" ${mt.mauSac == "Đen" ? "checked" : ""} checked>Đen
-                    <input type="radio" name="mauSac" value="Bạc" ${mt.mauSac == "Bạc" ? "checked" : ""}>Bạc
+                    <input type="radio" name="mauSac" value="Đen" checked>Đen
+                    <input type="radio" name="mauSac" value="Bạc">Bạc
                 </div>
                 <div class="col-6">
                     <label>Hãng</label>
-                    <select name="hang">
-                        <option value="MSI" ${mt.hang == "MSI" ? "selected" : ""}>MSI</option>
-                        <option value="ASUS" ${mt.hang == "ASUS" ? "selected" : ""}>ASUS</option>
-                        <option value="ACER" ${mt.hang == "ACER" ? "selected" : ""}>ACER</option>
-                        <option value="DELL" ${mt.hang == "DELL" ? "selected" : ""}>DELL</option>
+                    <select>
+                        <option value="MSI">MSI</option>
+                        <option value="ASUS">ASUS</option>
+                        <option value="ACER">ACER</option>
+                        <option value="DELL">DELL</option>
                     </select>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-12">
                     <label>Mô tả</label>
-                    <input type="text" class="form-control" name="mieuTa" value="${mt.mieuTa}"/>
+                    <input type="text" class="form-control"/>
                 </div>
             </div>
             <div class="row mt-4" style="justify-content: center">
@@ -75,43 +75,25 @@
                 </button>
             </div>
         </form>
-    <section>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Mã</th>
-                <th scope="col">Tên</th>
-                <th scope="col">Giá</th>
-                <th scope="col">Bộ nhớ</th>
-                <th scope="col">Màu sắc</th>
-                <th scope="col">Hãng</th>
-                <th scope="col">Miêu tả</th>
-                <th colspan="2">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach items="${lists}" var="mt">
+        <section>
+            <table class="table">
+                <thead>
                 <tr>
-                    <td>${mt.ma}</td>
-                    <td>${mt.ten}</td>
-                    <td>${mt.gia}</td>
-                    <td>${mt.boNho}</td>
-                    <td>${mt.mauSac}</td>
-                    <td>${mt.hang}</td>
-                    <td>${mt.mieuTa}</td>
-                    <td>
-                        <a href="/may-tinh/detail?id=${mt.id}" class="btn btn-success " tabindex="-1" role="button"
-                           aria-disabled="true">Detail</a>
-                        <a href="/may-tinh/delete?id=${mt.id}" class="btn btn-danger " tabindex="-1" role="button"
-                           aria-disabled="true">Delete</a>
-                        <a href="/may-tinh/view-update?id=${mt.id}" class="btn btn-info " tabindex="-1" role="button"
-                           aria-disabled="true">Update</a>
-                    </td>
+                    <th scope="col">Mã</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Bộ nhớ</th>
+                    <th scope="col">Màu sắc</th>
+                    <th scope="col">Hãng</th>
+                    <th scope="col">Miêu tả</th>
+                    <th colspan="2">Action</th>
                 </tr>
-            </c:forEach>
-            </tbody>
-        </table>
-    </section>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
 </main>
 <footer><p style="text-align: center;">HangNT169</p></footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
